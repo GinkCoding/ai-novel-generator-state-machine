@@ -1,0 +1,2 @@
+# Timeline - 事件日志（Append-only）
+# 格式：{"event_id": "evt_001", "seq": 1, "title": "...", "time_anchor": "...", "location": "...", "participants": [...], "description": "...", "changes": {...}, "evidence_quote": "...", "source": "..."}
