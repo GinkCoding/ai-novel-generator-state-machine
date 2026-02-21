@@ -374,23 +374,42 @@ SceneCard:
         return result
     
     def _logic_review(self, scene_card: Dict, draft: Dict) -> Dict:
-        """Step 6: 智能逻辑审查"""
-        from novel_ci.scripts import logic_reviewer as reviewer
+        """Step 6: AI 驱动的智能逻辑审查"""
+        from novel_ci.scripts import ai_logic_reviewer as reviewer
         
         canon_path = self.state_dir / 'canon.json'
         world_path = self.state_dir / 'world.json'
+        timeline_path = self.state_dir / 'timeline.jsonl'
         
+        # 加载上下文
         with open(canon_path, 'r', encoding='utf-8') as f:
             canon = json.load(f)
         with open(world_path, 'r', encoding='utf-8') as f:
             world = json.load(f)
         
-        # 调用逻辑审查器
+        # 加载时间线
+        timeline = []
+        if timeline_path.exists():
+            with open(timeline_path, 'r', encoding='utf-8') as f:
+                for line in f:
+                    line = line.strip()
+                    if line and not line.startswith('#'):
+                        try:
+                            timeline.append(json.loads(line))
+                        except:
+                            pass
+        
+        context = {
+            'canon': canon,
+            'world': world,
+            'timeline': timeline[-10:]  # 最近 10 个事件
+        }
+        
+        # 调用 AI 逻辑审查器
         result = reviewer.review_logic(
             scene_card=scene_card,
             draft=draft['content'],
-            world_state=world,
-            canon=canon
+            context=context
         )
         return result
     
