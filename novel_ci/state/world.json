@@ -8,7 +8,23 @@
         "char_003": {"trust": 8},
         "char_004": {"trust": 8}
       },
-      "status": {"health": 90, "energy": 70}
+      "status": {"health": 90, "energy": 70},
+      "knowledge": {
+        "fact_father_usa": {
+          "what": "胡八一活着在美国",
+          "known_at": "chapter_1",
+          "source": "母亲告知",
+          "source_char": "char_mother",
+          "is_secret": false
+        },
+        "fact_father_1959": {
+          "what": "胡八一 1959 年失踪",
+          "known_at": "chapter_1",
+          "source": "母亲告知",
+          "source_char": "char_mother",
+          "is_secret": false
+        }
+      }
     },
     "char_002": {
       "location": "loc_002_entrance",
@@ -18,7 +34,8 @@
         "char_003": {"trust": 7},
         "char_004": {"trust": 6}
       },
-      "status": {"health": 95, "energy": 75}
+      "status": {"health": 95, "energy": 75},
+      "knowledge": {}
     },
     "char_003": {
       "location": "loc_002_entrance",
@@ -28,7 +45,8 @@
         "char_002": {"trust": 7},
         "char_004": {"trust": 6}
       },
-      "status": {"health": 90, "energy": 65}
+      "status": {"health": 90, "energy": 65},
+      "knowledge": {}
     },
     "char_004": {
       "location": "loc_002_entrance",
@@ -38,7 +56,44 @@
         "char_002": {"trust": 6},
         "char_003": {"trust": 6}
       },
-      "status": {"health": 85, "energy": 60}
+      "status": {"health": 85, "energy": 60},
+      "knowledge": {
+        "fact_1959_team": {
+          "what": "1959 年地质队被请走",
+          "known_at": "chapter_2",
+          "source": "师父告知",
+          "source_char": "char_master",
+          "is_secret": true
+        },
+        "fact_1959_5people": {
+          "what": "12 人中 5 人被请走",
+          "known_at": "chapter_2",
+          "source": "师父告知",
+          "source_char": "char_master",
+          "is_secret": true
+        },
+        "fact_1959_7people": {
+          "what": "剩下 7 人失踪",
+          "known_at": "chapter_2",
+          "source": "师父告知",
+          "source_char": "char_master",
+          "is_secret": true
+        },
+        "fact_hu_bayi_visit": {
+          "what": "胡八一 10 年前来过",
+          "known_at": "chapter_2",
+          "source": "亲身经历",
+          "source_char": null,
+          "is_secret": true
+        },
+        "fact_701_archive": {
+          "what": "701 档案说 5 人被特殊收容",
+          "known_at": "chapter_6",
+          "source": "查阅档案",
+          "source_char": null,
+          "is_secret": true
+        }
+      }
     }
   },
   "items": {
