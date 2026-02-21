@@ -178,9 +178,10 @@ class StateMachineNovelGenerator:
         else:
             print("✓ 硬规则校验通过（无问题）")
         
-        # Step 6: LOGIC_REVIEW - 智能逻辑审查 ⭐ 新增
-        print("\n🧠 Step 6/8: LOGIC_REVIEW - 智能逻辑审查")
-        logic_result = self._logic_review(scene_card, draft)
+        # Step 6: DEEP_LOGIC_REVIEW - 深度逻辑审查 ⭐ 新增（6 层）
+        print("\n🧠 Step 6/9: DEEP_LOGIC_REVIEW - 深度逻辑审查（6 层）")
+        print("  正在执行 6 层深度审查...")
+        logic_result = self._deep_logic_review(scene_card, draft)
         
         if not logic_result['pass']:
             print(f"⚠️  发现 {len(logic_result['issues'])} 个逻辑问题")
@@ -373,9 +374,9 @@ SceneCard:
         )
         return result
     
-    def _logic_review(self, scene_card: Dict, draft: Dict) -> Dict:
-        """Step 6: AI 驱动的智能逻辑审查"""
-        from novel_ci.scripts import ai_logic_reviewer as reviewer
+    def _deep_logic_review(self, scene_card: Dict, draft: Dict) -> Dict:
+        """Step 6: 6 层深度逻辑审查"""
+        from novel_ci.scripts import deep_logic_reviewer as reviewer
         
         canon_path = self.state_dir / 'canon.json'
         world_path = self.state_dir / 'world.json'
@@ -405,8 +406,8 @@ SceneCard:
             'timeline': timeline[-10:]  # 最近 10 个事件
         }
         
-        # 调用 AI 逻辑审查器
-        result = reviewer.review_logic(
+        # 调用深度逻辑审查器
+        result = reviewer.review_deep_logic(
             scene_card=scene_card,
             draft=draft['content'],
             context=context
