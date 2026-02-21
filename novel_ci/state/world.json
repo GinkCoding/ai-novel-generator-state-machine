@@ -1,10 +1,79 @@
 {
-  "characters": {},
-  "items": {},
+  "characters": {
+    "char_001": {
+      "location": "loc_002_entrance",
+      "inventory": ["item_001", "item_003"],
+      "relationships": {
+        "char_002": {"trust": 8},
+        "char_003": {"trust": 8},
+        "char_004": {"trust": 8}
+      },
+      "status": {"health": 90, "energy": 70}
+    },
+    "char_002": {
+      "location": "loc_002_entrance",
+      "inventory": ["item_010"],
+      "relationships": {
+        "char_001": {"trust": 8},
+        "char_003": {"trust": 7},
+        "char_004": {"trust": 6}
+      },
+      "status": {"health": 95, "energy": 75}
+    },
+    "char_003": {
+      "location": "loc_002_entrance",
+      "inventory": ["item_002"],
+      "relationships": {
+        "char_001": {"trust": 8},
+        "char_002": {"trust": 7},
+        "char_004": {"trust": 6}
+      },
+      "status": {"health": 90, "energy": 65}
+    },
+    "char_004": {
+      "location": "loc_002_entrance",
+      "inventory": ["item_011"],
+      "relationships": {
+        "char_001": {"trust": 8},
+        "char_002": {"trust": 6},
+        "char_003": {"trust": 6}
+      },
+      "status": {"health": 85, "energy": 60}
+    }
+  },
+  "items": {
+    "item_001": {
+      "state": "hot",
+      "holder": "char_001",
+      "last_used": "chapter_7_scene_1"
+    },
+    "item_002": {
+      "state": "active",
+      "holder": "char_003",
+      "last_used": "chapter_7_scene_1"
+    },
+    "item_003": {
+      "state": "active",
+      "holder": "char_001"
+    },
+    "item_010": {
+      "state": "ready",
+      "holder": "char_002"
+    },
+    "item_011": {
+      "state": "secret",
+      "holder": "char_004"
+    }
+  },
   "time": {
-    "chapter": 0,
-    "scene": 0,
+    "chapter": 7,
+    "scene": 1,
     "last_updated": "2026-02-21T00:00:00+08:00"
   },
-  "last_commit": null
+  "last_commit": {
+    "chapter": 7,
+    "scene": 1,
+    "timestamp": "2026-02-21T00:00:00+08:00",
+    "summary": "团队到达断魂涧，陈三爷表明守墓人身份，胡念一得知胡八一 10 年前来过"
+  }
 }
