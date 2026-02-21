@@ -1,0 +1,33 @@
+{
+  "ch": 1,
+  "sc": 1,
+  "time_anchor": "chapter_1_start",
+  "location": "loc_001_beijing",
+  "pov": "char_001",
+  "participants": ["char_001", "char_004"],
+  "goal": "胡念一发现玉简，得知蜀山王墓存在",
+  "obstacle": "神秘警告纸条出现，增加悬念",
+  "outcome": "决定找王叔询问玉简来历",
+  "required_facts": [],
+  "allowed_changes": {
+    "char_001_knowledge": {
+      "add": ["fact_shu_mountain"]
+    },
+    "item_002_state": "discovered"
+  },
+  "foreshadowing": [
+    "玉简上的'蜀山开，蝉声起'",
+    "神秘警告纸条",
+    "王叔说'这趟浑水'"
+  ],
+  "knowledge_constraints": {
+    "char_001": {
+      "knows": [],
+      "should_not_know": ["蜀山王墓详情", "1959 年地质队", "父亲往事细节"]
+    },
+    "char_004": {
+      "knows": ["fact_shu_mountain"],
+      "can_reveal": ["蜀山王墓存在"]
+    }
+  }
+}

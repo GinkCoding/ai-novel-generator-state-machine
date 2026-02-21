@@ -1,96 +1,66 @@
 {
   "characters": {
     "char_001": {
-      "location": "loc_002_entrance",
-      "inventory": ["item_001", "item_003"],
+      "name": "胡念一",
+      "location": "loc_001_beijing",
+      "inventory": ["item_001", "item_002", "item_003"],
       "relationships": {
         "char_002": {"trust": 8},
         "char_003": {"trust": 8},
-        "char_004": {"trust": 8}
+        "char_004": {"trust": 9}
       },
-      "status": {"health": 90, "energy": 70},
+      "status": {"health": 100, "energy": 90},
       "knowledge": {
-        "fact_father_usa": {
-          "what": "胡八一活着在美国",
+        "fact_shu_mountain": {
+          "what": "蜀山王墓存在，巫峡棺山是锁，蜀山王墓是钥",
           "known_at": "chapter_1",
-          "source": "母亲告知",
-          "source_char": "char_mother",
-          "is_secret": false
+          "source": "王叔告知",
+          "source_char": "char_004",
+          "is_secret": true
         },
-        "fact_father_1959": {
-          "what": "胡八一 1959 年失踪",
+        "fact_team_assemble": {
+          "what": "需要集结王凯旋和杨雪莉",
           "known_at": "chapter_1",
-          "source": "母亲告知",
-          "source_char": "char_mother",
+          "source": "王叔告知",
+          "source_char": "char_004",
           "is_secret": false
         }
       }
     },
     "char_002": {
-      "location": "loc_002_entrance",
-      "inventory": ["item_010"],
+      "name": "王凯旋",
+      "location": "loc_001_beijing",
+      "inventory": [],
       "relationships": {
-        "char_001": {"trust": 8},
-        "char_003": {"trust": 7},
-        "char_004": {"trust": 6}
+        "char_001": {"trust": 8}
       },
-      "status": {"health": 95, "energy": 75},
+      "status": {"health": 100, "energy": 100},
       "knowledge": {}
     },
     "char_003": {
-      "location": "loc_002_entrance",
-      "inventory": ["item_002"],
+      "name": "杨雪莉",
+      "location": "loc_001_beijing",
+      "inventory": [],
       "relationships": {
-        "char_001": {"trust": 8},
-        "char_002": {"trust": 7},
-        "char_004": {"trust": 6}
+        "char_001": {"trust": 8}
       },
-      "status": {"health": 90, "energy": 65},
+      "status": {"health": 100, "energy": 100},
       "knowledge": {}
     },
     "char_004": {
-      "location": "loc_002_entrance",
-      "inventory": ["item_011"],
+      "name": "王叔",
+      "location": "loc_001_beijing",
+      "inventory": [],
       "relationships": {
-        "char_001": {"trust": 8},
-        "char_002": {"trust": 6},
-        "char_003": {"trust": 6}
+        "char_001": {"trust": 9}
       },
-      "status": {"health": 85, "energy": 60},
+      "status": {"health": 90, "energy": 80},
       "knowledge": {
-        "fact_1959_team": {
-          "what": "1959 年地质队被请走",
-          "known_at": "chapter_2",
-          "source": "师父告知",
-          "source_char": "char_master",
-          "is_secret": true
-        },
-        "fact_1959_5people": {
-          "what": "12 人中 5 人被请走",
-          "known_at": "chapter_2",
-          "source": "师父告知",
-          "source_char": "char_master",
-          "is_secret": true
-        },
-        "fact_1959_7people": {
-          "what": "剩下 7 人失踪",
-          "known_at": "chapter_2",
-          "source": "师父告知",
-          "source_char": "char_master",
-          "is_secret": true
-        },
-        "fact_hu_bayi_visit": {
-          "what": "胡八一 10 年前来过",
-          "known_at": "chapter_2",
-          "source": "亲身经历",
-          "source_char": null,
-          "is_secret": true
-        },
-        "fact_701_archive": {
-          "what": "701 档案说 5 人被特殊收容",
-          "known_at": "chapter_6",
-          "source": "查阅档案",
-          "source_char": null,
+        "fact_shu_mountain": {
+          "what": "蜀山王墓存在",
+          "known_at": "chapter_0",
+          "source": "胡八一告知",
+          "source_char": "char_father",
           "is_secret": true
         }
       }
@@ -98,37 +68,33 @@
   },
   "items": {
     "item_001": {
-      "state": "hot",
+      "name": "摸金符",
+      "state": "inactive",
       "holder": "char_001",
-      "last_used": "chapter_7_scene_1"
+      "description": "胡八一传给胡念一"
     },
     "item_002": {
-      "state": "active",
-      "holder": "char_003",
-      "last_used": "chapter_7_scene_1"
+      "name": "玉简",
+      "state": "discovered",
+      "holder": "char_001",
+      "description": "刻有'蜀山开，蝉声起'"
     },
     "item_003": {
+      "name": "十六字阴阳风水秘术残本",
       "state": "active",
-      "holder": "char_001"
-    },
-    "item_010": {
-      "state": "ready",
-      "holder": "char_002"
-    },
-    "item_011": {
-      "state": "secret",
-      "holder": "char_004"
+      "holder": "char_001",
+      "description": "胡八一遗留"
     }
   },
   "time": {
-    "chapter": 7,
+    "chapter": 1,
     "scene": 1,
-    "last_updated": "2026-02-21T00:00:00+08:00"
+    "last_updated": "2026-02-21T16:25:00+08:00"
   },
   "last_commit": {
-    "chapter": 7,
+    "chapter": 1,
     "scene": 1,
-    "timestamp": "2026-02-21T00:00:00+08:00",
-    "summary": "团队到达断魂涧，陈三爷表明守墓人身份，胡念一得知胡八一 10 年前来过"
+    "timestamp": "2026-02-21T16:25:00+08:00",
+    "summary": "胡念一发现玉简，王叔告知蜀山王墓存在，决定集结铁三角"
   }
 }

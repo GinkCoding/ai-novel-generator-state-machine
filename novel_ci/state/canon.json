@@ -46,6 +46,18 @@
   ],
   "locations": [
     {
+      "id": "loc_001_beijing",
+      "name": "北京",
+      "type": "city",
+      "description": "故事起点，胡念一整理父亲遗物"
+    },
+    {
+      "id": "loc_001_beijing_panjiayuan",
+      "name": "潘家园",
+      "type": "district",
+      "description": "北京古玩市场，王叔住处"
+    },
+    {
       "id": "loc_chengdu",
       "name": "成都",
       "type": "city",

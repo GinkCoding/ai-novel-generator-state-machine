@@ -1,0 +1,97 @@
+{
+  "chapter": 1,
+  "scene": 1,
+  "events": [
+    {
+      "event_id": "evt_001",
+      "seq": 1,
+      "title": "发现玉简",
+      "time_anchor": "chapter_1_start",
+      "location": "loc_001_beijing",
+      "participants": ["char_001"],
+      "description": "胡念一整理父亲遗物时发现玉简，刻有'蜀山开，蝉声起'"
+    },
+    {
+      "event_id": "evt_002",
+      "seq": 2,
+      "title": "神秘警告",
+      "time_anchor": "chapter_1_night",
+      "location": "loc_001_beijing",
+      "participants": ["char_001"],
+      "description": "神秘人敲门后留下警告纸条'别去蜀山'"
+    },
+    {
+      "event_id": "evt_003",
+      "seq": 3,
+      "title": "拜访王叔",
+      "time_anchor": "chapter_1_next_day",
+      "location": "loc_001_beijing_panjiayuan",
+      "participants": ["char_001", "char_004"],
+      "description": "胡念一向王叔询问玉简来历，得知蜀山王墓存在"
+    },
+    {
+      "event_id": "evt_004",
+      "seq": 4,
+      "title": "铁三角集结",
+      "time_anchor": "chapter_1_end",
+      "location": "loc_001_beijing_panjiayuan",
+      "participants": ["char_001", "char_004"],
+      "description": "王叔告知将联系王凯旋和杨雪莉，三天后集结"
+    }
+  ],
+  "information_transfers": [
+    {
+      "from": "char_004",
+      "to": "char_001",
+      "fact": "fact_shu_mountain",
+      "fact_description": "蜀山王墓存在，巫峡棺山是锁，蜀山王墓是钥"
+    },
+    {
+      "from": "char_004",
+      "to": "char_001",
+      "fact": "fact_team_assemble",
+      "fact_description": "需要集结王凯旋和杨雪莉"
+    }
+  ],
+  "character_changes": {
+    "char_001": {
+      "knowledge": {
+        "fact_shu_mountain": {
+          "what": "蜀山王墓存在，巫峡棺山是锁，蜀山王墓是钥",
+          "known_at": "chapter_1",
+          "source": "王叔告知",
+          "source_char": "char_004"
+        },
+        "fact_team_assemble": {
+          "what": "需要集结王凯旋和杨雪莉",
+          "known_at": "chapter_1",
+          "source": "王叔告知",
+          "source_char": "char_004"
+        }
+      },
+      "location": "loc_001_beijing"
+    }
+  },
+  "item_changes": {
+    "item_001": {
+      "state": "inactive",
+      "holder": "char_001"
+    },
+    "item_002": {
+      "state": "discovered",
+      "holder": "char_001"
+    },
+    "item_003": {
+      "state": "active",
+      "holder": "char_001"
+    }
+  },
+  "location_changes": {},
+  "foreshadowing_planted": [
+    "玉简上的'蜀山开，蝉声起'",
+    "神秘警告纸条（来源不明）",
+    "王叔说'这趟浑水'",
+    "蜀山王墓是祭坛而非墓",
+    "古蜀王化蝉而去"
+  ]
+}
