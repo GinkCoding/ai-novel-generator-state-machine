@@ -7,7 +7,7 @@
   "participants": ["char_001", "char_004"],
   "goal": "胡念一发现玉简，得知蜀山王墓存在",
   "obstacle": "神秘警告纸条出现，增加悬念",
-  "outcome": "决定找王叔询问玉简来历",
+  "outcome": "决定找王叔询问玉简来历，联系发小王胜利和杨雪霏",
   "required_facts": [],
   "allowed_changes": {
     "char_001_knowledge": {
@@ -29,5 +29,9 @@
       "knows": ["fact_shu_mountain"],
       "can_reveal": ["蜀山王墓存在"]
     }
+  },
+  "relationship_notes": {
+    "char_001_char_002": "发小，从小一起长大，后因学业/工作各自东西，多年未见但感情深厚",
+    "char_001_char_003": "发小，从小一起长大，后因学业/工作各自东西，多年未见但感情深厚"
   }
 }

@@ -36,7 +36,7 @@
       "time_anchor": "chapter_1_end",
       "location": "loc_001_beijing_panjiayuan",
       "participants": ["char_001", "char_004"],
-      "description": "王叔告知将联系王凯旋和杨雪莉，三天后集结"
+      "description": "王叔告知将联系王胜利和杨雪霏，三天后集结"
     }
   ],
   "information_transfers": [
@@ -50,7 +50,7 @@
       "from": "char_004",
       "to": "char_001",
       "fact": "fact_team_assemble",
-      "fact_description": "需要集结王凯旋和杨雪莉"
+      "fact_description": "需要集结王胜利和杨雪霏（发小）"
     }
   ],
   "character_changes": {

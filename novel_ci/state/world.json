@@ -5,9 +5,9 @@
       "location": "loc_001_beijing",
       "inventory": ["item_001", "item_002", "item_003"],
       "relationships": {
-        "char_002": {"trust": 8},
-        "char_003": {"trust": 8},
-        "char_004": {"trust": 9}
+        "char_002": {"trust": 9, "relation": "发小"},
+        "char_003": {"trust": 9, "relation": "发小"},
+        "char_004": {"trust": 9, "relation": "长辈"}
       },
       "status": {"health": 100, "energy": 90},
       "knowledge": {
@@ -19,7 +19,7 @@
           "is_secret": true
         },
         "fact_team_assemble": {
-          "what": "需要集结王凯旋和杨雪莉",
+          "what": "需要集结王浩然和杨雨霏",
           "known_at": "chapter_1",
           "source": "王叔告知",
           "source_char": "char_004",
@@ -28,21 +28,25 @@
       }
     },
     "char_002": {
-      "name": "王凯旋",
+      "name": "王胜利",
       "location": "loc_001_beijing",
       "inventory": [],
       "relationships": {
-        "char_001": {"trust": 8}
+        "char_001": {"trust": 9, "relation": "发小"},
+        "char_003": {"trust": 8, "relation": "发小"},
+        "char_004": {"trust": 9, "relation": "父子"}
       },
       "status": {"health": 100, "energy": 100},
       "knowledge": {}
     },
     "char_003": {
-      "name": "杨雪莉",
+      "name": "杨雪霏",
       "location": "loc_001_beijing",
       "inventory": [],
       "relationships": {
-        "char_001": {"trust": 8}
+        "char_001": {"trust": 9, "relation": "发小"},
+        "char_002": {"trust": 8, "relation": "发小"},
+        "char_005": {"trust": 9, "relation": "母女"}
       },
       "status": {"health": 100, "energy": 100},
       "knowledge": {}
@@ -52,7 +56,8 @@
       "location": "loc_001_beijing",
       "inventory": [],
       "relationships": {
-        "char_001": {"trust": 9}
+        "char_001": {"trust": 9, "relation": "父辈好友"},
+        "char_002": {"trust": 10, "relation": "父子"}
       },
       "status": {"health": 90, "energy": 80},
       "knowledge": {

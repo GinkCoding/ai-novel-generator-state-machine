@@ -13,22 +13,34 @@
       "abilities": ["分金定穴", "风水术", "古墓知识"],
       "personality": ["内敛", "沉稳", "重情义"],
       "known_facts": ["father_alive_usa", "father_retired"],
-      "taboos": ["不轻易信任陌生人"]
+      "taboos": ["不轻易信任陌生人"],
+      "relationships": {
+        "char_002": "发小，从小一起长大，后各自东西",
+        "char_003": "发小，从小一起长大，后各自东西"
+      }
     },
     {
       "id": "char_002",
-      "name": "王浩然",
-      "identity": ["机关术传人"],
+      "name": "王胜利",
+      "identity": ["机关术传人", "王叔之子"],
       "abilities": ["破解机关", "古建筑知识"],
-      "personality": ["幽默", "好奇心强", "技术宅"]
+      "personality": ["幽默", "好奇心强", "技术宅"],
+      "relationships": {
+        "char_001": "发小，从小一起长大，后各自东西",
+        "char_003": "发小，从小一起长大，后各自东西"
+      }
     },
     {
       "id": "char_003",
-      "name": "杨雨霏",
-      "identity": ["Shirley 杨后人"],
+      "name": "杨雪霏",
+      "identity": ["Shirley 杨后人", "杨婶之女"],
       "abilities": ["搬山术", "外语", "考古知识"],
       "personality": ["冷静", "果断", "简洁"],
-      "inventory": ["item_002"]
+      "inventory": ["item_002"],
+      "relationships": {
+        "char_001": "发小，从小一起长大，后各自东西",
+        "char_002": "发小，从小一起长大，后各自东西"
+      }
     },
     {
       "id": "char_004",
