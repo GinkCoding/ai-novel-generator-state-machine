@@ -134,36 +134,36 @@ class StateMachineNovelGenerator:
     def generate_chapter(self, chapter_num: int, scene_num: int, 
                         outline: Dict, word_count: int = 4000) -> Dict[str, Any]:
         """
-        生成章节（7 步流水线）
+        生成章节（8 步流水线 - 新增逻辑审查）
         """
         print(f"\n🚀 开始生成 第{chapter_num}章 第{scene_num}场")
         print("=" * 60)
         
         # Step 1: PLAN - 生成 SceneCard
-        print("\n📋 Step 1/7: PLAN - 场景规划")
+        print("\n📋 Step 1/8: PLAN - 场景规划")
         scene_card = self._plan_scene(chapter_num, scene_num, outline)
         self._save_scene_card(chapter_num, scene_num, scene_card)
         print(f"✓ SceneCard 生成完成")
         
         # Step 2: WRITE - 基于 SceneCard 写正文
-        print("\n✍️  Step 2/7: WRITE - 正文写作")
+        print("\n✍️  Step 2/8: WRITE - 正文写作")
         draft = self._write_prose(scene_card, word_count)
         print(f"✓ 正文草稿完成 ({len(draft.get('content', ''))} 字)")
         
         # Step 3: EXTRACT - 从正文抽取事实
-        print("\n🔍 Step 3/7: EXTRACT - 事实抽取")
+        print("\n🔍 Step 3/8: EXTRACT - 事实抽取")
         extract_data = self._extract_facts(draft, scene_card)
         print(f"✓ 抽取 {len(extract_data.get('events', []))} 个事件")
         
         # Step 4: VALIDATE - 硬规则校验
-        print("\n⚖️  Step 4/7: VALIDATE - 硬校验")
+        print("\n⚖️  Step 4/8: VALIDATE - 硬校验")
         validation_result = self._validate(extract_data)
         
         if not validation_result['pass']:
-            print(f"⚠️  发现 {len(validation_result['issues'])} 个问题")
+            print(f"⚠️  发现 {len(validation_result['issues'])} 个硬规则问题")
             
             # Step 5: PATCH - 最小补丁修复
-            print("\n🔧 Step 5/7: PATCH - 最小补丁修复")
+            print("\n🔧 Step 5/8: PATCH - 最小补丁修复")
             max_retries = 3
             for attempt in range(max_retries):
                 draft = self._patch_prose(draft, validation_result['issues'])
@@ -171,21 +171,42 @@ class StateMachineNovelGenerator:
                 validation_result = self._validate(extract_data)
                 
                 if validation_result['pass']:
-                    print(f"✓ 修复完成（第{attempt + 1}轮）")
+                    print(f"✓ 硬规则修复完成（第{attempt + 1}轮）")
                     break
             else:
-                print(f"⚠️  达到最大修复次数，保留警告")
+                print(f"⚠️  达到最大修复次数，保留硬规则警告")
         else:
-            print("✓ 校验通过（无问题）")
+            print("✓ 硬规则校验通过（无问题）")
         
-        # Step 6: COMMIT - 更新 World State
-        print("\n💾 Step 6/7: COMMIT - 更新 World State")
+        # Step 6: LOGIC_REVIEW - 智能逻辑审查 ⭐ 新增
+        print("\n🧠 Step 6/8: LOGIC_REVIEW - 智能逻辑审查")
+        logic_result = self._logic_review(scene_card, draft)
+        
+        if not logic_result['pass']:
+            print(f"⚠️  发现 {len(logic_result['issues'])} 个逻辑问题")
+            for issue in logic_result['issues'][:3]:  # 只显示前 3 个
+                print(f"  - [{issue['severity']}] {issue['message']}")
+            
+            # 逻辑问题修复
+            print("\n🔧 Step 7/8: LOGIC_PATCH - 逻辑问题修复")
+            draft = self._patch_logic(draft, logic_result['issues'])
+            logic_result = self._logic_review(scene_card, draft)
+            
+            if logic_result['pass']:
+                print("✓ 逻辑问题修复完成")
+            else:
+                print(f"⚠️  仍有 {len(logic_result['issues'])} 个逻辑问题待人工审查")
+        else:
+            print("✓ 逻辑审查通过（无问题）")
+        
+        # Step 8: COMMIT - 更新 World State
+        print("\n💾 Step 8/8: COMMIT - 更新 World State")
         self._commit_changes(extract_data)
         print("✓ World State 已更新")
         
-        # Step 7: OUTPUT - 输出最终版本
-        print("\n📦 Step 7/7: OUTPUT - 输出最终版本")
-        output = self._generate_output(draft, validation_result, extract_data)
+        # Step 9: OUTPUT - 输出最终版本
+        print("\n📦 Step 9/9: OUTPUT - 输出最终版本")
+        output = self._generate_output(draft, validation_result, logic_result, extract_data)
         self._save_chapter(chapter_num, scene_num, output)
         print(f"✓ 输出完成")
         
@@ -352,6 +373,70 @@ SceneCard:
         )
         return result
     
+    def _logic_review(self, scene_card: Dict, draft: Dict) -> Dict:
+        """Step 6: 智能逻辑审查"""
+        from novel_ci.scripts import logic_reviewer as reviewer
+        
+        canon_path = self.state_dir / 'canon.json'
+        world_path = self.state_dir / 'world.json'
+        
+        with open(canon_path, 'r', encoding='utf-8') as f:
+            canon = json.load(f)
+        with open(world_path, 'r', encoding='utf-8') as f:
+            world = json.load(f)
+        
+        # 调用逻辑审查器
+        result = reviewer.review_logic(
+            scene_card=scene_card,
+            draft=draft['content'],
+            world_state=world,
+            canon=canon
+        )
+        return result
+    
+    def _patch_logic(self, draft: Dict, issues: List[Dict]) -> Dict:
+        """Step 7: 逻辑问题修复"""
+        
+        system_prompt = """你是一个专业的编辑，擅长发现并修复逻辑漏洞。
+
+你的任务是根据逻辑审查问题修复正文。
+
+重要规则：
+1. 保持原文风格和情节
+2. 只修改导致逻辑问题的部分
+3. 修复后的内容必须符合常识和逻辑
+4. 不要引入新的逻辑问题"""
+
+        issues_text = "\n".join([
+            f"- [{issue['severity'].upper()}] {issue['category']}: {issue['message']}"
+            f"\n  建议：{issue['suggestion']}"
+            for issue in issues
+        ])
+        
+        user_prompt = f"""请根据以下逻辑问题修复正文：
+
+逻辑问题:
+{issues_text}
+
+原文:
+{draft['content'][:8000]}
+
+请只修改必要的部分，修复逻辑问题（输出完整修复后的正文）："""
+
+        messages = [
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_prompt}
+        ]
+        
+        response = self._call_llm(messages, model=self.model_writer)
+        
+        return {
+            "chapter": draft['chapter'],
+            "scene": draft['scene'],
+            "content": response,
+            "word_count": len(response)
+        }
+    
     def _patch_prose(self, draft: Dict, issues: List[Dict]) -> Dict:
         """Step 5: 最小补丁修复"""
         
@@ -442,8 +527,8 @@ SceneCard:
         with open(txt_path, 'w', encoding='utf-8') as f:
             f.write(output['draft']['content'])
     
-    def _generate_output(self, draft: Dict, validation: Dict, extract: Dict) -> Dict:
-        """Step 7: 生成最终输出"""
+    def _generate_output(self, draft: Dict, validation: Dict, logic_review: Dict, extract: Dict) -> Dict:
+        """Step 9: 生成最终输出"""
         return {
             "meta": {
                 "chapter": draft['chapter'],
@@ -453,6 +538,7 @@ SceneCard:
             },
             "draft": draft,
             "validation": validation,
+            "logic_review": logic_review,
             "extract": extract,
             "world_state_snapshot": self.world.copy()
         }
